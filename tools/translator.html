@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>翻訳 - Toolbox</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/tools.css">
+</head>
+<body>
+  <header>
+    <h1>翻訳ツール</h1>
+    <nav>
+      <a href="../index.html">← トップへ戻る</a>
+    </nav>
+  </header>
+  <main>
+    <section class="translator">
+      <label for="inputText">翻訳したいテキスト:</label>
+      <textarea id="inputText" rows="5" placeholder="ここに文章を入力してください"></textarea>
+      <div class="options">
+        <label for="langFrom">翻訳元:</label>
+        <select id="langFrom">
+          <option value="ja">日本語</option>
+          <option value="en">英語</option>
+        </select>
+        <label for="langTo">翻訳先:</label>
+        <select id="langTo">
+          <option value="en">英語</option>
+          <option value="ja">日本語</option>
+        </select>
+      </div>
+      <button id="translateBtn">翻訳する</button>
+      <h2>翻訳結果:</h2>
+      <div id="outputText" class="output-box"></div>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Toolbox</p>
+  </footer>
+  <script src="../js/translator.js"></script>
+</body>
+</html>

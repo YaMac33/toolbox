@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>トークン数カウント - Toolbox</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/tools.css">
+</head>
+<body>
+  <header>
+    <h1>トークン数カウント</h1>
+    <nav>
+      <a href="../index.html">← トップへ戻る</a>
+    </nav>
+  </header>
+  <main>
+    <section class="token-counter">
+      <label for="inputText">テキストを入力してください:</label>
+      <textarea id="inputText" rows="8" placeholder="ここに文章を入力してください"></textarea>
+      <div class="result-box">
+        <p>推定トークン数: <span id="tokenCount">0</span></p>
+      </div>
+      <p class="note">※このカウントは簡易的な目安です。正確なトークン数はtiktoken等のライブラリを利用してください。</p>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Toolbox</p>
+  </footer>
+  <script src="../js/token-counter.js"></script>
+</body>
+</html>

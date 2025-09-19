@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>割り勘計算機</title>
+  <link rel="stylesheet" href="../css/tools.css">
+</head>
+<body>
+  <header>
+    <h1>割り勘計算機</h1>
+  </header>
+
+  <main>
+    <section class="tool-container">
+      <label for="total">合計金額 (円):</label>
+      <input type="number" id="total" placeholder="例: 12000" required>
+
+      <label for="people">人数:</label>
+      <input type="number" id="people" placeholder="例: 4" required>
+
+      <button id="calc-split">計算する</button>
+
+      <div id="split-result" class="result-box"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p><a href="../index.html">← ホームに戻る</a></p>
+  </footer>
+
+  <script src="../js/utils.js"></script>
+  <script src="../calculators/split-bill.js"></script>
+</body>
+</html>

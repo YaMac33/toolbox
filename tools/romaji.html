@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ローマ字変換ツール</title>
+  <link rel="stylesheet" href="../css/tools.css">
+</head>
+<body>
+  <header>
+    <h1>ローマ字変換ツール</h1>
+  </header>
+
+  <main>
+    <section class="tool-container">
+      <label for="japaneseText">日本語テキスト:</label>
+      <textarea id="japaneseText" placeholder="例: こんにちは" rows="4"></textarea>
+
+      <button id="convertBtn">変換する</button>
+
+      <label for="romajiText">ローマ字:</label>
+      <textarea id="romajiText" readonly rows="4"></textarea>
+    </section>
+  </main>
+
+  <footer>
+    <p><a href="../index.html">← ホームに戻る</a></p>
+  </footer>
+
+  <script src="../js/utils.js"></script>
+  <script type="module" src="../js/translate/romaji.js"></script>
+</body>
+</html>

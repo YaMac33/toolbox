@@ -2,7 +2,7 @@
 // split-bill.js : 割り勘計算スクリプト
 // ================================
 
-import { isPositive, isInteger } from "../js/validators.js";
+import { isPositive, isInteger } from "../validators.js";
 
 /**
  * 割り勘金額を計算する

@@ -2,7 +2,7 @@
 // bmi.js : BMI計算スクリプト
 // ================================
 
-import { isPositive, isNumber } from "../js/validators.js";
+import { isPositive, isNumber } from "../validators.js";
 
 /**
  * BMIを計算する

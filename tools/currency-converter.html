@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>通貨換算ツール</title>
+  <link rel="stylesheet" href="../css/tools.css">
+</head>
+<body>
+  <header>
+    <h1>通貨換算ツール</h1>
+  </header>
+
+  <main>
+    <section class="tool-container">
+      <label for="amount">金額:</label>
+      <input type="number" id="amount" placeholder="例: 1000" required>
+
+      <label for="fromCurrency">元の通貨:</label>
+      <select id="fromCurrency">
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+        <option value="JPY" selected>JPY</option>
+        <option value="BTC">BTC</option>
+      </select>
+
+      <label for="toCurrency">換算先の通貨:</label>
+      <select id="toCurrency">
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+        <option value="JPY" selected>JPY</option>
+        <option value="BTC">BTC</option>
+      </select>
+
+      <button id="convertBtn">換算する</button>
+
+      <div id="result" class="result-box"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p><a href="../index.html">← ホームに戻る</a></p>
+  </footer>
+
+  <script src="../js/utils.js"></script>
+  <script type="module" src="../js/calculators/currency-convert.js"></script>
+</body>
+</html>

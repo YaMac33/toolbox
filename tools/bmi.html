@@ -19,9 +19,9 @@
       <label for="height">身長 (cm):</label>
       <input type="number" id="height" placeholder="例: 170" required>
 
-      <button id="calc-bmi">計算する</button>
+      <button id="bmiCalcBtn">計算する</button>
 
-      <div id="bmi-result" class="result-box"></div>
+      <div id="bmiResult" class="result-box"></div>
     </section>
   </main>
 
@@ -30,6 +30,7 @@
   </footer>
 
   <script src="../js/utils.js"></script>
-  <script src="../js/calculators/bmi.js"></script>
+  <!-- ES Modulesで読み込む -->
+  <script type="module" src="../js/calculators/bmi.js"></script>
 </body>
 </html>

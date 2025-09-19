@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMI計算機</title>
+  <link rel="stylesheet" href="../css/tools.css">
+</head>
+<body>
+  <header>
+    <h1>BMI計算機</h1>
+  </header>
+
+  <main>
+    <section class="tool-container">
+      <label for="weight">体重 (kg):</label>
+      <input type="number" id="weight" placeholder="例: 70" required>
+
+      <label for="height">身長 (cm):</label>
+      <input type="number" id="height" placeholder="例: 170" required>
+
+      <button id="calc-bmi">計算する</button>
+
+      <div id="bmi-result" class="result-box"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p><a href="../index.html">← ホームに戻る</a></p>
+  </footer>
+
+  <script src="../js/utils.js"></script>
+  <script src="../calculators/bmi.js"></script>
+</body>
+</html>

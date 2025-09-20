@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>日付計算ツール</title>
+  <link rel="stylesheet" href="../css/tools.css">
+</head>
+<body>
+  <header>
+    <h1>日付計算ツール</h1>
+  </header>
+
+  <main>
+    <section class="tool-container">
+      <label for="baseDate">基準日:</label>
+      <input type="date" id="baseDate">
+
+      <label for="days">日数 (正の数=未来 / 負の数=過去):</label>
+      <input type="number" id="days" placeholder="例: 7 (未来) / -3 (過去)">
+
+      <button id="calcBtn">計算する</button>
+
+      <label for="resultDate">計算結果:</label>
+      <input type="text" id="resultDate" readonly>
+    </section>
+  </main>
+
+  <footer>
+    <p><a href="../index.html">← ホームに戻る</a></p>
+  </footer>
+
+  <script src="../js/utils.js"></script>
+  <script type="module" src="../js/utils-tools/date-calc.js"></script>
+</body>
+</html>

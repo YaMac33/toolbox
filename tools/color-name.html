@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>カラーコード変換ツール</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <main>
+    <section class="tool-container">
+      <h1>カラーコード変換ツール</h1>
+
+      <label for="colorInput">色名またはHEXコードを入力:</label>
+      <input type="text" id="colorInput" placeholder="例: red または #ff0000">
+
+      <button id="convertBtn">変換する</button>
+
+      <div id="colorPreview" class="color-preview"></div>
+
+      <div id="result">
+        <p><strong>HEX:</strong> <span id="hexValue">-</span></p>
+        <p><strong>RGB:</strong> <span id="rgbValue">-</span></p>
+        <p><strong>HSL:</strong> <span id="hslValue">-</span></p>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="../js/dev-design/color-name.js"></script>
+</body>
+</html>

@@ -40,51 +40,31 @@
     </section>
 
     <section>
-      <h3>文字・文章系 <button class="btn-ghost copy-btn" data-copy="文字・文章系ツール">コピー</button></h3>
+      <h3>文字・文章系</h3>
       <ul>
-        <li>文字数カウント</li>
-        <li>トークン数カウント（AI用プロンプトチェック）</li>
-        <li>単語数カウント</li>
-        <li>文章読みやすさチェック</li>
+        <li><a href="tools/counter.html">文字数カウント</a></li>
+        <li><a href="tools/token-counter.html">トークン数カウント（AI用プロンプトチェック）</a></li>
         <li>ランダム文章生成（例：例文・テスト用）</li>
-      </ul>
-    </section>
-
-    <section>
-      <h3>翻訳・言語系 <button class="btn-ghost copy-btn" data-copy="翻訳・言語系ツール">コピー</button></h3>
-      <ul>
-        <li>英和/和英翻訳</li>
-        <li>簡易文章要約</li>
-        <li>単語帳ジェネレーター</li>
         <li><a href="tools/romaji.html">ローマ字変換</a></li>
       </ul>
     </section>
 
     <section>
-      <h3>便利ツール系 <button class="btn-ghost copy-btn" data-copy="便利ツール系">コピー</button></h3>
+      <h3>便利ツール系</h3>
       <ul>
-        <li>QRコード生成</li>
+        <li><a href="tools/qr-generator.html">QR生成</a></li>
         <li><a href="tools/date-calc.html">日付計算（○日後、○日前）</a></li>
         <li><a href="tools/timer-and-stopwatch.html">タイマー・ストップウォッチ</a></li>
-        <li>天気取得（API連携）</li>
-        <li>RSS簡易表示</li>
         <li><a href="tools\color-name.html">色コード確認・カラーサンプル</a></li>
-        <li>正規表現テストページ</li>
-        <li>JSON整形・検証</li>
         <li><a href="tools\markdown-preview.html">Markdownプレビュー</a></li>
-        <li>URLエンコード・デコード</li>
         <li>パスワード生成</li>
-        <li>ファイル名一括変換（クライアント側のみ）</li>
-        <li>IPアドレス確認</li>
       </ul>
     </section>
 
     <section>
-      <h3>開発・デザイン系 <button class="btn-ghost copy-btn" data-copy="開発・デザイン系">コピー</button></h3>
+      <h3>開発・デザイン系</h3>
       <ul>
         <li><a href="https://codepen.io/pen/">HTML/CSS/JavaScriptライブ編集</a></li>
-        <li>アイコン検索・プレビュー</li>
-        <li>文字フォント比較プレビュー</li>
         <li><a href="tools\color-name.html">色名からカラーコード変換</a></li>
       </ul>
     </section>
@@ -93,24 +73,9 @@
   <!-- 共通フッター -->
   <footer class="site-footer">
     <div class="container">
-      <p>&copy; 2025 Toolbox | GitHub Pagesで公開中</p>
+      <p>&copy; 2025 Toolbox </p>
     </div>
   </footer>
 
-  <!-- コピー機能のJS -->
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const buttons = document.querySelectorAll(".copy-btn");
-      buttons.forEach(btn => {
-        btn.addEventListener("click", () => {
-          const text = btn.getAttribute("data-copy");
-          navigator.clipboard.writeText(text).then(() => {
-            btn.textContent = "コピー済み!";
-            setTimeout(() => btn.textContent = "コピー", 1500);
-          });
-        });
-      });
-    });
-  </script>
 </body>
 </html>

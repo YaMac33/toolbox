@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>ランダムテキストジェネレーター</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .tool-container {
+      max-width: 500px;
+      margin: auto;
+      padding: 20px;
+    }
+    .options {
+      margin: 10px 0;
+    }
+    label {
+      display: block;
+      margin: 5px 0;
+    }
+    #randomTextOutput {
+      width: 100%;
+      padding: 10px;
+      font-size: 1.2em;
+      margin: 10px 0;
+    }
+    button {
+      margin: 5px;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="tool-container">
+      <h1>ランダムテキストジェネレーター</h1>
+
+      <label>
+        長さ: <input type="number" id="textLength" min="1" max="200" value="20">
+      </label>
+
+      <div class="options">
+        <label><input type="checkbox" id="includeLetters" checked> 英字 (a-zA-Z)</label>
+        <label><input type="checkbox" id="includeNumbers" checked> 数字 (0-9)</label>
+        <label><input type="checkbox" id="includeSymbols"> 記号 (!@#$%)</label>
+        <label><input type="checkbox" id="includeKana"> かな (あいうえお…)</label>
+      </div>
+
+      <textarea id="randomTextOutput" rows="4" readonly></textarea>
+
+      <button id="generateTextBtn">生成する</button>
+      <button id="copyTextBtn">コピー</button>
+    </section>
+  </main>
+
+  <script type="module" src="../js/text/random-text.js"></script>
+</body>
+</html>

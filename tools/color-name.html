@@ -2,10 +2,17 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>カラーコード変換ツール</title>
   <link rel="stylesheet" href="../css/style.css">
-</head>
+  <link rel="stylesheet" href="../css/tools.css">
+  <script type="module" defer src="../js/utils.js"></script>
+  <script type="module" defer src="../js/dev-design/color-name.js"></script>
+  <script type="module" defer src="../js/include.js"></script>
+
 <body>
+  <!-- 共通ヘッダーを読み込み -->
+  <div id="header"></div>
   <main>
     <section class="tool-container">
       <h1>カラーコード変換ツール</h1>
@@ -31,11 +38,8 @@
     </section>
   </main>
 
-  <footer>
-    <p><a href="../index.html">← ホームに戻る</a></p>
-  </footer>
-
-  <script type="module" src="../js/utils.js"></script>
-  <script type="module" src="../js/dev-design/color-name.js"></script>
+  <!-- 共通フッターを読み込み -->
+  <div id="footer"></div>
+  
 </body>
 </html>

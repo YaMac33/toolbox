@@ -1,14 +1,16 @@
 // js/include.js
 document.addEventListener("DOMContentLoaded", () => {
+  const basePath = location.pathname.includes("/tools/") ? "../" : "./";
+
   // ヘッダー読み込み
-  fetch("header.html")
+  fetch(basePath + "header.html")
     .then(response => response.text())
     .then(data => {
       document.getElementById("header").innerHTML = data;
     });
 
   // フッター読み込み
-  fetch("footer.html")
+  fetch(basePath + "footer.html")
     .then(response => response.text())
     .then(data => {
       document.getElementById("footer").innerHTML = data;

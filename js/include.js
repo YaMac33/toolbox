@@ -1,5 +1,14 @@
 // js/include.js
 document.addEventListener("DOMContentLoaded", () => {
+  console.log("Toolboxへようこそ！");
+
+  // ナビゲーションリンクをクリックしたときの簡易エフェクト
+  const navLinks = document.querySelectorAll("nav a");
+  navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      alert(`「${link.textContent}」ページへ移動します。`);
+    });
+  });
 
   /**
    * 現在の階層に応じて header.html / footer.html のパスを計算

@@ -4,6 +4,11 @@
   <meta charset="UTF-8">
   <title>Markdownプレビュー</title>
   <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/tools.css">
+  <!-- marked.js CDN -->
+  <script type="module" defer src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script type="module" defer src="../js/utils-tools/markdown-preview.js"></script>
+  <script type="module" defer src="../js/include.js"></script>
   <style>
     .markdown-container {
       display: flex;
@@ -28,6 +33,9 @@
 </head>
 <body>
   <main>
+    <!-- 共通ヘッダーを読み込み -->
+    <div id="header"></div>
+   
     <section class="tool-container">
       <h1>Markdownプレビュー</h1>
       <div class="markdown-container">
@@ -37,12 +45,8 @@
     </section>
   </main>
 
-  <footer>
-    <p><a href="../index.html">← ホームに戻る</a></p>
-  </footer>
+  <!-- 共通フッターを読み込み -->
+  <div id="footer"></div>
 
-  <!-- marked.js CDN -->
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  <script type="module" src="../js/utils-tools/markdown-preview.js"></script>
 </body>
 </html>

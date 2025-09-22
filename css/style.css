@@ -44,6 +44,13 @@ site-header {
     color: #00aaff;
 }
 
+.logo-tool {
+    color: #008080;
+}
+.logo-box {
+    color: #666666;
+}
+
 /* メイン部分 */
 main {
   padding: 2rem;

@@ -3,11 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ダミー顧客検索</title>
+  <title>ダミー顧客検索（GitHub Pages対応版）</title>
+  <!-- Faker.js UMD版 -->
   <script src="https://cdn.jsdelivr.net/npm/@faker-js/faker/dist/faker.umd.min.js"></script>
   <style>
     body { font-family: sans-serif; padding: 20px; }
-    input { margin-right: 10px; }
+    input { margin-right: 10px; padding: 5px; }
+    button { margin-right: 5px; padding: 5px 10px; }
     table { border-collapse: collapse; width: 100%; margin-top: 10px; }
     th, td { border: 1px solid #ccc; padding: 5px; text-align: left; }
   </style>
@@ -16,9 +18,8 @@
   <h1>ダミー顧客検索</h1>
 
   <input id="searchName" placeholder="名前検索">
-  <input id="searchCity" placeholder="都市検索">
-  <button onclick="search()">検索</button>
-  <button onclick="showAll()">全件表示</button>
+  <button id="searchBtn">検索</button>
+  <button id="showAllBtn">全件表示</button>
 
   <table id="resultTable">
     <thead>
@@ -30,52 +31,47 @@
   </table>
 
   <script>
-    // Faker.js を使用して500件のダミー顧客データを作成
-    const customers = Array.from({length: 500}, (_, i) => ({
-      id: i + 1,
-      name: faker.faker.person.fullName(),
-      email: faker.faker.internet.email(),
-      age: faker.faker.number.int({ min: 18, max: 70 }),
-      city: faker.faker.address.city()
-    }));
+    // DOMが完全に読み込まれたら実行
+    document.addEventListener("DOMContentLoaded", () => {
+      // 500件のダミー顧客データを生成
+      const customers = Array.from({length: 500}, (_, i) => ({
+        id: i + 1,
+        name: faker.faker.person.fullName(),
+        email: faker.faker.internet.email(),
+        age: faker.faker.number.int({ min: 18, max: 70 }),
+        city: faker.faker.address.city()
+      }));
 
-    // 表示用関数
-    function renderTable(data) {
-      const tbody = document.querySelector("#resultTable tbody");
-      tbody.innerHTML = data.map(c => `
-        <tr>
-          <td>${c.id}</td>
-          <td>${c.name}</td>
-          <td>${c.email}</td>
-          <td>${c.age}</td>
-          <td>${c.city}</td>
-        </tr>
-      `).join('');
-    }
+      // テーブルにデータを表示
+      function renderTable(data) {
+        const tbody = document.querySelector("#resultTable tbody");
+        tbody.innerHTML = data.map(c => `
+          <tr>
+            <td>${c.id}</td>
+            <td>${c.name}</td>
+            <td>${c.email}</td>
+            <td>${c.age}</td>
+            <td>${c.city}</td>
+          </tr>
+        `).join('');
+      }
 
-    // 初回表示（全件）
-    renderTable(customers);
+      // 初回全件表示
+      renderTable(customers);
 
-    // 検索関数
-    function search() {
-      const nameKeyword = document.getElementById('searchName').value.trim();
-      const cityKeyword = document.getElementById('searchCity').value.trim();
-
-      const result = customers.filter(c => {
-        const nameMatch = nameKeyword ? c.name.includes(nameKeyword) : true;
-        const cityMatch = cityKeyword ? c.city.includes(cityKeyword) : true;
-        return nameMatch && cityMatch;
+      // 検索ボタン
+      document.getElementById("searchBtn").addEventListener("click", () => {
+        const keyword = document.getElementById("searchName").value.trim();
+        const result = customers.filter(c => c.name.includes(keyword));
+        renderTable(result);
       });
 
-      renderTable(result);
-    }
-
-    // 全件表示
-    function showAll() {
-      document.getElementById('searchName').value = '';
-      document.getElementById('searchCity').value = '';
-      renderTable(customers);
-    }
+      // 全件表示ボタン
+      document.getElementById("showAllBtn").addEventListener("click", () => {
+        document.getElementById("searchName").value = '';
+        renderTable(customers);
+      });
+    });
   </script>
 </body>
 </html>

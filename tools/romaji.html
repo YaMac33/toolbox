@@ -4,13 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ローマ字変換ツール</title>
+  <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/tools.css">
+  <script type="module" defer src="../js/utils.js"></script>
+  <script type="module" defer src="../js/translate/romaji.js"></script>
+  <script type="module" defer src="../js/include.js"></script>
 </head>
 <body>
   <header>
     <h1>ローマ字変換ツール</h1>
   </header>
 
+  <!-- 共通ヘッダーを読み込み -->
+  <div id="header"></div>
   <main>
     <section class="tool-container">
       <label for="japaneseText">日本語テキスト:</label>
@@ -23,11 +29,8 @@
     </section>
   </main>
 
-  <footer>
-    <p><a href="../index.html">← ホームに戻る</a></p>
-  </footer>
+  <!-- 共通フッターを読み込み -->
+  <div id="footer"></div>
 
-  <script type="module" src="../js/utils.js"></script>
-  <script type="module" src="../js/translate/romaji.js"></script>
 </body>
 </html>

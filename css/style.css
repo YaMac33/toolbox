@@ -34,6 +34,13 @@ site-header {
     padding: 0 20px; /* Added for padding on smaller screens */
     box-sizing: border-box; /* Ensures padding is included in width */
 }
+a.logo:link,
+a.logo:visited,
+a.logo:hover,
+a.logo:active {
+  color: inherit;   /* spanの色をそのまま使う */
+  text-decoration: none;
+}
 .logo {
     font-size: 28px;
     font-weight: bold;

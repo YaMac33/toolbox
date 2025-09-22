@@ -14,29 +14,34 @@ body {
 }
 
 /* ヘッダー */
-header {
-  background-color: #2c3e50;
-  color: #fff;
-  padding: 1rem;
+site-header {
+    background-color: #fff;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0; /* Added for full width */
+    right: 0; /* Added for full width */
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
-
-header h1 {
-  margin-bottom: 0.5rem;
+.header-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px; /* Added for padding on smaller screens */
+    box-sizing: border-box; /* Ensures padding is included in width */
 }
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 1rem;
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    transition: color 0.3s;
 }
-
-nav a {
-  color: #fff;
-  text-decoration: none;
-}
-
-nav a:hover {
-  text-decoration: underline;
+.logo:hover {
+    color: #00aaff;
 }
 
 /* メイン部分 */

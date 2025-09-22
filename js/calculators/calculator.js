@@ -1,4 +1,4 @@
-// calculator.js - 電卓スクリプト
+// calculator.js
 
 document.addEventListener("DOMContentLoaded", () => {
   const display = document.getElementById("display");
@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // 計算処理
   equalsBtn.addEventListener("click", () => {
     try {
-      const result = eval(currentInput); // evalは簡易実装用
+      const result = eval(currentInput); // evalは簡易的
       display.value = result;
       currentInput = result.toString();
     } catch (error) {
@@ -38,6 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// キーボード入力処理
 document.addEventListener("keydown", (event) => {
   const key = event.key; // 押されたキー（例: "1", "+", "Enter" など）
 
@@ -56,19 +57,19 @@ document.addEventListener("keydown", (event) => {
     document.getElementById("equals").click();
   }
 
-  // Backspace で 1文字削除（任意機能）
+  // Backspace で 1文字削除
   if (key === "Backspace") {
-    const display = document.getElementById("display");
-    display.value = display.value.slice(0, -1);
+    currentInput = currentInput.slice(0, -1);
+    document.getElementById("display").value = currentInput;
   }
 
-  // Cキーでクリア（任意）
+  // Cキーでクリア
   if (key.toLowerCase() === "c") {
     document.getElementById("clear").click();
   }
 });
 
-// ボタン処理をまとめた関数（クリックでもキーボードでも共通処理）
+// ボタン処理をまとめた関数
 function pressButton(value) {
   const button = document.querySelector(`.btn[data-value="${value}"]`);
   if (button) button.click(); // クリックイベントを発火させる

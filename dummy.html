@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ダミー顧客検索</title>
+  <script src="https://cdn.jsdelivr.net/npm/@faker-js/faker/dist/faker.umd.min.js"></script>
+  <style>
+    body { font-family: sans-serif; padding: 20px; }
+    input { margin-right: 10px; }
+    table { border-collapse: collapse; width: 100%; margin-top: 10px; }
+    th, td { border: 1px solid #ccc; padding: 5px; text-align: left; }
+  </style>
+</head>
+<body>
+  <h1>ダミー顧客検索</h1>
+
+  <input id="searchName" placeholder="名前検索">
+  <input id="searchCity" placeholder="都市検索">
+  <button onclick="search()">検索</button>
+  <button onclick="showAll()">全件表示</button>
+
+  <table id="resultTable">
+    <thead>
+      <tr>
+        <th>ID</th><th>名前</th><th>Email</th><th>年齢</th><th>都市</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script>
+    // Faker.js を使用して500件のダミー顧客データを作成
+    const customers = Array.from({length: 500}, (_, i) => ({
+      id: i + 1,
+      name: faker.faker.person.fullName(),
+      email: faker.faker.internet.email(),
+      age: faker.faker.number.int({ min: 18, max: 70 }),
+      city: faker.faker.address.city()
+    }));
+
+    // 表示用関数
+    function renderTable(data) {
+      const tbody = document.querySelector("#resultTable tbody");
+      tbody.innerHTML = data.map(c => `
+        <tr>
+          <td>${c.id}</td>
+          <td>${c.name}</td>
+          <td>${c.email}</td>
+          <td>${c.age}</td>
+          <td>${c.city}</td>
+        </tr>
+      `).join('');
+    }
+
+    // 初回表示（全件）
+    renderTable(customers);
+
+    // 検索関数
+    function search() {
+      const nameKeyword = document.getElementById('searchName').value.trim();
+      const cityKeyword = document.getElementById('searchCity').value.trim();
+
+      const result = customers.filter(c => {
+        const nameMatch = nameKeyword ? c.name.includes(nameKeyword) : true;
+        const cityMatch = cityKeyword ? c.city.includes(cityKeyword) : true;
+        return nameMatch && cityMatch;
+      });
+
+      renderTable(result);
+    }
+
+    // 全件表示
+    function showAll() {
+      document.getElementById('searchName').value = '';
+      document.getElementById('searchCity').value = '';
+      renderTable(customers);
+    }
+  </script>
+</body>
+</html>

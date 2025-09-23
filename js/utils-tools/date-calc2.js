@@ -57,11 +57,17 @@ document.addEventListener("DOMContentLoaded", () => {
   const btn = document.getElementById("calcBtn");
 
   // デフォルトで今日の日付を開始日・終了日にセットする処理
-  const today = new Date(); // 現在の日付と時刻をUTC基準で取得
-  const japanTime = new Date(today.toLocaleString('en-US', { timeZone: 'Asia/Tokyo' }));
-  const todayStr = japanTime.toISOString().slice(0, 10); // YYYY-MM-DD形式
+  const today = new Date(); 
+  // 日本のタイムゾーンで日付の各要素（年、月、日）を取得
+  const year = today.getFullYear();
+  const month = (today.getMonth() + 1).toLocaleDateString().padStart(2, '0'); // 月は0から始まるため+1し、2桁に整形
+  const day = today.getDate().toLocaleDateString().padStart(2, '0'); // 日を2桁に整形
+
+  // YYYY-MM-DD形式の文字列を作成
+  const todayStr = `${year}-${month}-${day}`;
   startInput.value = todayStr;  // 開始日欄にセット
   finishInput.value = todayStr; // 終了日欄にセット
+
 
   // ボタンがクリックされたときの処理を登録
   btn.addEventListener("click", () => {

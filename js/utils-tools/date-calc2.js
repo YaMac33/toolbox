@@ -60,8 +60,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const today = new Date(); 
   // 日本のタイムゾーンで日付の各要素（年、月、日）を取得
   const year = today.getFullYear();
-  const month = (today.getMonth() + 1).toLocaleDateString().padStart(2, '0'); // 月は0から始まるため+1し、2桁に整形
-  const day = today.getDate().toLocaleDateString().padStart(2, '0'); // 日を2桁に整形
+  const month = (today.getMonth() + 1).toString().padStart(2, '0'); // 月は0から始まるため+1し、2桁に整形
+  const day = today.getDate().toString().padStart(2, '0'); // 日を2桁に整形
 
   // YYYY-MM-DD形式の文字列を作成
   const todayStr = `${year}-${month}-${day}`;

@@ -57,8 +57,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const btn = document.getElementById("calcBtn");
 
   // デフォルトで今日の日付を開始日・終了日にセットする処理
-  const today = new Date();  // 今日の日付を取得
-  const todayStr = today.toISOString().slice(0, 10); // YYYY-MM-DD形式
+  const today = new Date(); // 現在の日付と時刻をUTC基準で取得
+  const japanTime = new Date(today.toLocaleString('en-US', { timeZone: 'Asia/Tokyo' }));
+  const todayStr = japanTime.toISOString().slice(0, 10); // YYYY-MM-DD形式
   startInput.value = todayStr;  // 開始日欄にセット
   finishInput.value = todayStr; // 終了日欄にセット
 

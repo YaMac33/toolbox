@@ -1,64 +1,79 @@
-<!DOCTYPE html>
+<!-- index.html -->
+<!doctype html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>便利ツールポータル - Toolbox</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/tools.css">
-  <script defer src="js/include.js"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>便利ツール集 — index.html</title>
+  <style>
+    body { font-family: system-ui, -apple-system, "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Segoe UI", Roboto, "Helvetica Neue", Arial; line-height:1.6; padding:28px; max-width:980px; margin:auto; color:#111; }
+    h1 { font-size:1.6rem; margin-bottom:0.25rem; }
+    h2 { margin-top:1.4rem; font-size:1.2rem; border-left:4px solid #2b6cb0; padding-left:0.6rem; }
+    ul { padding-left:1.05rem; }
+    li { margin:0.45rem 0; }
+    a { color:#1a73e8; text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    .note { color:#555; font-size:0.95rem; margin-top:0.6rem; }
+    footer { margin-top:2rem; font-size:0.86rem; color:#666; }
+  </style>
 </head>
 <body>
-  <!-- 共通ヘッダーを読み込み -->
-  <div id="header"></div>
+  <h1>便利ツールページ集（リンク集）</h1>
+  <p class="note">用途ごとに便利なウェブツールを厳選しました。クリックで各サイトを開きます。</p>
 
-  <!-- メインコンテンツ -->
-  <main class="tool-wrapper">
-  <h2>便利ツールページのアイデア</h2>
+  <h2>計算系</h2>
+  <ul>
+    <li>電卓（四則演算・応用計算） — <a href="https://www.calculator.net/basic-calculator.html" target="_blank" rel="noopener">Calculator.net（Basic Calculator）</a></li>
+    <li>BMI計算機 — <a href="https://www.calculator.net/bmi-calculator.html" target="_blank" rel="noopener">Calculator.net（BMI Calculator）</a></li>
+    <li>割り勘計算 — <a href="https://splitbillcalculator.net/" target="_blank" rel="noopener">Split Bill Calculator</a></li>
+    <li>通貨換算（法定通貨） — <a href="https://www.xe.com/en-us/currencyconverter/" target="_blank" rel="noopener">XE Currency Converter</a></li>
+    <li>暗号資産換算（仮想通貨） — <a href="https://www.coingecko.com/en/converter" target="_blank" rel="noopener">CoinGecko Converter</a></li>
+  </ul>
 
-  <section>
-    <h3>計算系</h3>
-    <ul>
-      <li><a href="tools/calculator.html">電卓（四則演算・応用計算）</a></li>
-      <li><a href="tools/bmi.html">BMI計算機</a></li>
-      <li><a href="tools/currency-converter.html">通貨換算・暗号資産換算</a></li>
-    </ul>
-  </section>
+  <h2>文字・文章系</h2>
+  <ul>
+    <li>文字数カウント — <a href="https://charcounter.com/en/" target="_blank" rel="noopener">Charcounter</a></li>
+    <li>トークン数カウント（AI用） — <a href="https://platform.openai.com/tokenizer" target="_blank" rel="noopener">OpenAI Tokenizer</a></li>
+    <li>単語数カウント — <a href="https://wordcounter.net/" target="_blank" rel="noopener">WordCounter.net</a></li>
+    <li>文章読みやすさチェック — <a href="https://hemingwayapp.com/" target="_blank" rel="noopener">Hemingway Editor</a></li>
+    <li>ランダム文章生成（例文・テスト用） — <a href="https://randomwordgenerator.com/sentence.php" target="_blank" rel="noopener">Random Sentence Generator</a></li>
+  </ul>
 
-  <section>
-    <h3>文字・文章系</h3>
-    <ul>
-      <li><a href="tools/counter.html">文字数カウント</a></li>
-      <li><a href="tools/token-counter.html">トークン数カウント（AI用プロンプトチェック）</a></li>
-      <li><a href="tools/random-text.html">ランダム文章生成（例：例文・テスト用）</a></li>
-      <li><a href="tools/romaji.html">ローマ字変換</a></li>
-    </ul>
-  </section>
+  <h2>翻訳・言語系</h2>
+  <ul>
+    <li>英和 / 和英 翻訳 — <a href="https://translate.google.com/" target="_blank" rel="noopener">Google 翻訳</a> ／ <a href="https://www.deepl.com/en/translator" target="_blank" rel="noopener">DeepL 翻訳</a></li>
+    <li>簡易文章要約 — <a href="https://smmry.com/" target="_blank" rel="noopener">SMMRY</a> ／ <a href="https://resoomer.ai/en/" target="_blank" rel="noopener">Resoomer</a></li>
+    <li>単語帳ジェネレーター（フラッシュカード作成） — <a href="https://quizlet.com/create-set" target="_blank" rel="noopener">Quizlet（Create Set）</a></li>
+    <li>ローマ字変換（日本語→ローマ字） — <a href="https://www.romajidesu.com/translator/" target="_blank" rel="noopener">RomajiDesu</a></li>
+  </ul>
 
-  <section>
-    <h3>便利ツール系</h3>
-    <ul>
-      <li><a href="tools/qr-generator.html">QR生成</a></li>
-      <li><a href="tools/date-calc.html">日付計算</a></li>
-      <li><a href="tools/date-calc2.html">日付計算2</a></li>
-      <li><a href="tools/timer-and-stopwatch.html">タイマー・ストップウォッチ</a></li>
-      <li><a href="tools\color-name.html">色コード確認・カラーサンプル</a></li>
-      <li><a href="tools\markdown-preview.html">Markdownプレビュー</a></li>
-      <li><a href="tools\password-generator.html">パスワード生成</a></li> 
-      <li><a href="tools\dummy.html">パスワード生成</a></li>
-    </ul>
-  </section>
+  <h2>便利ツール系</h2>
+  <ul>
+    <li>QRコード生成 — <a href="https://www.qrcode-monkey.com/" target="_blank" rel="noopener">QRCode Monkey</a></li>
+    <li>日付計算（○日後／○日前・逆算） — <a href="https://www.timeanddate.com/date/dateadd.html" target="_blank" rel="noopener">Timeanddate Date Calculator</a></li>
+    <li>タイマー・ストップウォッチ — <a href="https://www.online-stopwatch.com/" target="_blank" rel="noopener">Online Stopwatch</a></li>
+    <li>天気（予報） — <a href="https://weather.com/" target="_blank" rel="noopener">The Weather Channel（weather.com）</a></li>
+    <li>RSS簡易表示（リーダー） — <a href="https://feedly.com/" target="_blank" rel="noopener">Feedly</a></li>
+    <li>色コード確認・カラーサンプル — <a href="https://htmlcolorcodes.com/color-picker/" target="_blank" rel="noopener">HTML Color Codes（Color Picker）</a></li>
+    <li>正規表現テストページ — <a href="https://regex101.com/" target="_blank" rel="noopener">regex101</a></li>
+    <li>JSON整形・検証 — <a href="https://jsonlint.com/" target="_blank" rel="noopener">JSONLint</a></li>
+    <li>Markdownプレビュー — <a href="https://dillinger.io/" target="_blank" rel="noopener">Dillinger</a></li>
+    <li>URLエンコード・デコード — <a href="https://www.urlencoder.org/" target="_blank" rel="noopener">URLencoder.org</a></li>
+    <li>パスワード生成 — <a href="https://www.passwordsgenerator.com/" target="_blank" rel="noopener">Passwordsgenerator.com</a></li>
+    <li>ファイル名一括変換（クライアント側） — <a href="https://webrename.com/" target="_blank" rel="noopener">WebRename（オンライン一括リネーム）</a></li>
+    <li>IPアドレス確認（自分のIP） — <a href="https://ipinfo.io/" target="_blank" rel="noopener">IPinfo</a></li>
+  </ul>
 
-  <section>
-    <h3>開発・デザイン系</h3>
-    <ul>
-      <li><a href="https://codepen.io/pen/">HTML/CSS/JavaScriptライブ編集</a></li>
-      <li><a href="tools\color-name.html">色名からカラーコード変換</a></li>
-    </ul>
-  </section>
-</main>
+  <h2>開発・デザイン系</h2>
+  <ul>
+    <li>HTML / CSS / JavaScript ライブ編集 — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a></li>
+    <li>アイコン検索・プレビュー — <a href="https://www.flaticon.com/" target="_blank" rel="noopener">Flaticon</a></li>
+    <li>文字フォント比較プレビュー — <a href="https://wordmark.it/" target="_blank" rel="noopener">Wordmark.it</a></li>
+    <li>色名 ←→ カラーコード変換・情報 — <a href="https://www.colorhexa.com/" target="_blank" rel="noopener">ColorHexa</a></li>
+  </ul>
 
-  <!-- 共通フッターを読み込み -->
-  <div id="footer"></div>
+  <footer>
+    <small>このページはリンク集です。各サービスの利用規約やプライバシーポリシーは、それぞれのサイトでご確認ください。</small>
+  </footer>
 </body>
 </html>
